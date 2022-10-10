@@ -10,7 +10,7 @@ disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /images/icon-dark.png
-description: Informational site for RanxHub.
+description: A Repository for IR Runs.
 author:
   name: Elias Bassani
   email: ranxhub@gmail.com
