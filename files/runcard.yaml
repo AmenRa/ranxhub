@@ -1,0 +1,67 @@
+# Run metadata
+run:
+  name:
+  description:
+  version: 1.0  # 1.0 by default
+  # URL of repository containing the code to reproduce the run
+  # It is not mandatory, but we strongly encourage to provide reproducible runs 
+  code:   
+  authors:  # List of the authors of the run (who run the code)
+  - name:
+    orcid:  # This field in not mandatory, but highly recommended
+  team:  # This field in not mandatory
+  - name:
+    url:
+  tags:
+  # - Fine-Tuned
+  # - Zero-Shot
+  # - Retrieval
+  # - Re-Ranking
+  # - ...
+  date:
+    day:
+    month: # August
+    year:
+
+# Dataset metadata
+benchmark:
+  name:  # Name of the benchmark
+  dataset:  # Name of the dataset (can be the same of the benchmark)
+  split:  # val / test
+  version:
+  ir-datasets-id:  # See here: https://ir-datasets.com, N/A if not available
+
+# Metadata of the paper that originated the run
+# Only runs from published papers are accepted for sharing
+paper:
+  title:
+  authors:
+  - name:
+    orcid:  # This field in not mandatory, but highly recommended
+  date:
+    day:
+    month: # October
+    year:
+  doi:  # doi code, not the URL
+  dblp:  # URL of the BibTex from dblp - e.g., https://dblp.org/rec/conf/ecir/Bassani22.html?view=bibtex
+
+# Metadata of the model that originated the run
+model:
+  name:
+  description:
+  paper:  # Title of the original model paper, can be the same of the run
+  doi:  # doi code, not the URL
+  dblp:  # URL of the BibTex from dblp - e.g., https://dblp.org/rec/conf/ecir/Bassani22.html?view=bibtex
+  authors:
+  - name:
+    orcid:  # This field in not mandatory, but highly recommended
+  tags:
+  # - Classic
+  # - Probabilistic
+  # - Query Expansion
+  # - Personalization
+  # - Neural Network
+  # - Machine Learning
+  # - Deep Learning
+  # - Distillation
+  # - ...
