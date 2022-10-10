@@ -1,0 +1,112 @@
+ranxhub-id: amdbfpse/ps/test/ikr3/bm25-bienc-qa
+
+run:
+  name: BM25 + BiEnc + QA
+  version: 1.0
+  description: This run was computed using BiEnc and QA to re-rank the top 1000
+    BM25 results. Original and re-ranking scores were fused using the Weighted Sum
+    fusion algorithm provided by ranx.
+  code: https://github.com/AmenRa/amdbfpse-baselines
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: IKR3
+    url: https://ikr3.disco.unimib.it
+  results:
+    HR@1: 0.4694663167104112
+    HR@5: 0.8038495188101488
+    HR@10: 0.9093613298337708
+    HR@20: 0.9655293088363954
+    HR@50: 0.9928258967629047
+    HR@100: 0.9991251093613298
+    P@1: 0.4694663167104112
+    P@5: 0.3398075240594926
+    P@10: 0.27720034995625553
+    P@20: 0.21626421697287837
+    P@50: 0.1447244094488189
+    P@100: 0.10025896762904637
+    Recall@1: 0.031227646090781058
+    Recall@5: 0.11109098803502211
+    Recall@10: 0.17867047579248452
+    Recall@20: 0.2731737387856788
+    Recall@50: 0.4443371891427193
+    Recall@100: 0.5994539654338973
+    Recall@1000: 1.0
+    F1@1: 0.0003874431330558139
+    F1@5: 0.0019723940396823418
+    F1@10: 0.005608867379279142
+    F1@20: 0.013250726311996894
+    F1@50: 0.063425646483635
+    F1@100: 0.14122640318332141
+    MRR@1: 0.4694663167104112
+    MRR@5: 0.5973840769903762
+    MRR@10: 0.6119980141371217
+    MRR@20: 0.6160702296255224
+    MRR@50: 0.6170454504199101
+    MRR@100: 0.6171387515705106
+    MAP@1: 0.031227646090781058
+    MAP@5: 0.08363627142309005
+    MAP@10: 0.11294918658154102
+    MAP@20: 0.14268600780573218
+    MAP@50: 0.17800621294804872
+    MAP@100: 0.19847290025838638
+    NDCG@1: 0.4694663167104112
+    NDCG@5: 0.3672980147253891
+    NDCG@10: 0.3141345189563284
+    NDCG@20: 0.31350310571595236
+    NDCG@50: 0.38693753035223444
+    NDCG@100: 0.451136724626612
+  tags:
+  - Fine-Tuned
+  - Re-Ranking
+  date:
+    day: 12
+    month: August
+    year: 2022
+benchmark:
+  name: A Multi-Domain Benchmark for Personalized Search Evaluation
+  dataset: Political Science
+  split: Test
+  version: 1.0
+  ir-datasets-id: N/A
+paper:
+  title: A Multi-Domain Benchmark for Personalized Search Evaluation
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  date:
+    day: 17
+    month: October
+    year: 2022
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+model:
+  name: BiEnc / QA
+  description: BiEnc is a bi-encoder retrieval model. QA is a query-aware personalization
+    model that weighs the contribution of the user-related texts w.r.t. the query
+    during personalization. Texts representations were computed with all-MiniLM-L6-v2.
+  paper: A Multi-Domain Benchmark for Personalized Search Evaluation
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  tags:
+  - Personalization
+  - Long-Term Personalization
+  - Neural Network
+  - Deep Learning
+  - Transformer

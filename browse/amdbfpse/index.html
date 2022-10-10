@@ -1,0 +1,178 @@
+---
+title: A Multi-Domain Benchmark for Personalized Search Evaluation
+datatable: true
+---
+
+
+{% assign datasets = site.data.datasets %}
+{% assign benchmark = "amdbfpse" %}
+
+{% assign cs_runs = site.data.runcards[benchmark]["cs"] %}
+{% assign phy_runs = site.data.runcards[benchmark]["phy"] %}
+{% assign ps_runs = site.data.runcards[benchmark]["ps"] %}
+{% assign psy_runs = site.data.runcards[benchmark]["psy"] %}
+
+
+
+
+<div>
+    <p>
+        You can find more information about this dataset <a
+            href="https://github.com/AmenRa/a-multi-domain-benchmark-for-personalized-search-evaluation">here</a>.
+    </p>
+    <p>
+        <u>The search function inspect all the metadata, even those not displayed!</u>
+    </p>
+
+    <h2 class="dataset section-title">Computer Science - Test Set</h2>
+    <table class="dataset leaderboard hover leaderboard-amdbfpse">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">MAP@100</th>
+                <th class="metric">MRR@10</th>
+                <th class="metric">MRR@100</th>
+                <th class="metric">NDCG@10</th>
+                <th class="metric">NDCG@100</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in cs_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a
+                        href="{{ site.baseurl }}/browse/{{benchmark}}/cs/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric">{{run_metadata.results["MAP@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@10"]      | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@10"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@100"]    | times: 100 | precision: 2}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+    <h2 class="dataset section-title">Physics - Test Set</h2>
+    <table class="dataset leaderboard hover leaderboard-amdbfpse">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">MAP@100</th>
+                <th class="metric">MRR@10</th>
+                <th class="metric">MRR@100</th>
+                <th class="metric">NDCG@10</th>
+                <th class="metric">NDCG@100</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in phy_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a
+                        href="{{ site.baseurl }}/browse/{{benchmark}}/phy/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric">{{run_metadata.results["MAP@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@10"]      | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@10"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@100"]    | times: 100 | precision: 2}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+    <h2 class="dataset section-title">Political Science - Test Set</h2>
+    <table class="dataset leaderboard hover leaderboard-amdbfpse">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">MAP@100</th>
+                <th class="metric">MRR@10</th>
+                <th class="metric">MRR@100</th>
+                <th class="metric">NDCG@10</th>
+                <th class="metric">NDCG@100</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in ps_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a
+                        href="{{ site.baseurl }}/browse/{{benchmark}}/ps/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric">{{run_metadata.results["MAP@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@10"]      | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@10"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@100"]    | times: 100 | precision: 2}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+    <h2 class="dataset section-title">Psychology - Test Set</h2>
+    <table class="dataset leaderboard hover leaderboard-amdbfpse">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">MAP@100</th>
+                <th class="metric">MRR@10</th>
+                <th class="metric">MRR@100</th>
+                <th class="metric">NDCG@10</th>
+                <th class="metric">NDCG@100</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in psy_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a
+                        href="{{ site.baseurl }}/browse/{{benchmark}}/psy/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric">{{run_metadata.results["MAP@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@10"]      | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["MRR@100"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@10"]     | times: 100 | precision: 2}}</td>
+                <td class="metric">{{run_metadata.results["NDCG@100"]    | times: 100 | precision: 2}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>

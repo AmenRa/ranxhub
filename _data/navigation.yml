@@ -1,0 +1,24 @@
+- name: Main page
+  link: /
+  new_window: false
+  highlight: false
+- name: Browse
+  link: /browse
+  new_window: false
+  highlight: false
+- name: Share
+  link: /share
+  new_window: false
+  highlight: false
+- name: Motivations
+  link: /motivations
+  new_window: false
+  highlight: false
+- name: Report an issue
+  link: https://github.com/AmenRa/ranx/issues/new/choose
+  new_window: true
+  highlight: false
+- name: Github
+  link: https://github.com/AmenRa/ranx
+  new_window: true
+  highlight: true

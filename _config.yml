@@ -1,0 +1,71 @@
+# ----
+# Site
+
+title: ranxhub
+url: "https://amenra.github.io/hubtest"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key:
+disqus_shortname:
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /images/icon-dark.png
+description: Informational site for RanxHub.
+author:
+  name: Elias Bassani
+  email: ranxhub@gmail.com
+  twitter: # twitter username without the @ symbol
+social:
+  name: ranx
+  links:
+    - https://github.com/AmenRa/ranx
+
+# -----
+# Build
+
+timezone: Etc/UTC
+
+collections:
+  staff_members:
+    _hide_content: true
+
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+jekyll-archives:
+  enabled:
+    - categories
+
+plugins:
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+
+_select_data:
+  social_icons:
+    - GitHub
+
+_comments:
+  highlight: Emphasis the text
+  color: The background color used in the plan name and call to action.
+  new_window: Open link in new window

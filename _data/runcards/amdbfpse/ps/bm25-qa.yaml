@@ -1,0 +1,112 @@
+ranxhub-id: amdbfpse/ps/test/ikr3/bm25-qa
+
+run:
+  name: BM25 + QA
+  version: 1.0
+  description: This run was computed using QA to re-rank the top 1000 BM25 results.
+    Original and re-ranking scores were fused using the Weighted Sum fusion algorithm
+    provided by ranx.
+  code: https://github.com/AmenRa/amdbfpse-baselines
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: IKR3
+    url: https://ikr3.disco.unimib.it
+  results:
+    HR@1: 0.43552055993000877
+    HR@5: 0.7692038495188102
+    HR@10: 0.873490813648294
+    HR@20: 0.9424321959755031
+    HR@50: 0.9867016622922135
+    HR@100: 0.9963254593175853
+    P@1: 0.43552055993000877
+    P@5: 0.31156605424321965
+    P@10: 0.2550306211723535
+    P@20: 0.19754155730533685
+    P@50: 0.13301137357830273
+    P@100: 0.09330883639545057
+    Recall@1: 0.028765202548476407
+    Recall@5: 0.10122193591202316
+    Recall@10: 0.16314426176587193
+    Recall@20: 0.24783731821464158
+    Recall@50: 0.4056248771013192
+    Recall@100: 0.5553145868989993
+    Recall@1000: 1.0
+    F1@1: 0.00043760146422185787
+    F1@5: 0.0012456127314848008
+    F1@10: 0.0028111311106703155
+    F1@20: 0.007413899457790071
+    F1@50: 0.02433661763169099
+    F1@100: 0.04771522866728945
+    MRR@1: 0.43552055993000877
+    MRR@5: 0.5615368912219306
+    MRR@10: 0.5758198975128109
+    MRR@20: 0.580798099862969
+    MRR@50: 0.5823198831469221
+    MRR@100: 0.5824679960781849
+    MAP@1: 0.028765202548476407
+    MAP@5: 0.07518298938782908
+    MAP@10: 0.10155106049510355
+    MAP@20: 0.1273832090478178
+    MAP@50: 0.15834897709429546
+    MAP@100: 0.17692692719179504
+    NDCG@1: 0.43552055993000877
+    NDCG@5: 0.33787670636200257
+    NDCG@10: 0.28939069631406383
+    NDCG@20: 0.28679852512277026
+    NDCG@50: 0.3542147147610195
+    NDCG@100: 0.4159618604838701
+  tags:
+  - Fine-Tuned
+  - Re-Ranking
+  date:
+    day: 12
+    month: August
+    year: 2022
+benchmark:
+  name: A Multi-Domain Benchmark for Personalized Search Evaluation
+  dataset: Political Science
+  split: Test
+  version: 1.0
+  ir-datasets-id: N/A
+paper:
+  title: A Multi-Domain Benchmark for Personalized Search Evaluation
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  date:
+    day: 17
+    month: October
+    year: 2022
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+model:
+  name: QA
+  description: QA is a query-aware personalization model that weighs the contribution
+    of the user-related texts w.r.t. the query during personalization. Texts representations
+    were computed with all-MiniLM-L6-v2.
+  paper: A Multi-Domain Benchmark for Personalized Search Evaluation
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  tags:
+  - Personalization
+  - Query-Aware Personalization
+  - Neural Network
+  - Deep Learning
+  - Transformer

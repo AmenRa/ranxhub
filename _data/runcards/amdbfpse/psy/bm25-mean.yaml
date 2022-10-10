@@ -1,0 +1,112 @@
+ranxhub-id: amdbfpse/psy/test/ikr3/bm25-mean
+
+run:
+  name: BM25 + Mean
+  version: 1.0
+  description: This run was computed using Mean to re-rank the top 1000 BM25 results.
+    Original and re-ranking scores were fused using the Weighted Sum fusion algorithm
+    provided by ranx.
+  code: https://github.com/AmenRa/amdbfpse-baselines
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: IKR3
+    url: https://ikr3.disco.unimib.it
+  results:
+    HR@1: 0.4224158415841584
+    HR@5: 0.7730693069306931
+    HR@10: 0.8828514851485149
+    HR@20: 0.9504158415841584
+    HR@50: 0.9893069306930693
+    HR@100: 0.9979405940594059
+    P@1: 0.4224158415841584
+    P@5: 0.30865742574257427
+    P@10: 0.25062178217821784
+    P@20: 0.19508514851485148
+    P@50: 0.13039049504950498
+    P@100: 0.09092039603960399
+    Recall@1: 0.027090759202402802
+    Recall@5: 0.09700937069891064
+    Recall@10: 0.15490480253928537
+    Recall@20: 0.23722889051103532
+    Recall@50: 0.3892720495264065
+    Recall@100: 0.535153367966933
+    Recall@1000: 1.0
+    F1@1: 5.105638769005106e-05
+    F1@5: 0.0008711757463263033
+    F1@10: 0.0015355461693662472
+    F1@20: 0.003573864770323705
+    F1@50: 0.013665662130057831
+    F1@100: 0.05375600809356653
+    MRR@1: 0.4224158415841584
+    MRR@5: 0.5553610561056105
+    MRR@10: 0.5704587144428728
+    MRR@20: 0.575274200952569
+    MRR@50: 0.5766392368907312
+    MRR@100: 0.5767734142371774
+    MAP@1: 0.027090759202402802
+    MAP@5: 0.07116697381282779
+    MAP@10: 0.09541718984088206
+    MAP@20: 0.12004445297496504
+    MAP@50: 0.14956876890836654
+    MAP@100: 0.16728786078852065
+    NDCG@1: 0.4224158415841584
+    NDCG@5: 0.3329145306155554
+    NDCG@10: 0.2841569572561065
+    NDCG@20: 0.2763921173111634
+    NDCG@50: 0.3416172723221733
+    NDCG@100: 0.4035470073793341
+  tags:
+  - Fine-Tuned
+  - Re-Ranking
+  date:
+    day: 12
+    month: August
+    year: 2022
+benchmark:
+  name: A Multi-Domain Benchmark for Personalized Search Evaluation
+  dataset: Psychology
+  split: Test
+  version: 1.0
+  ir-datasets-id: N/A
+paper:
+  title: A Multi-Domain Benchmark for Personalized Search Evaluation
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  date:
+    day: 17
+    month: October
+    year: 2022
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+model:
+  name: Mean
+  description: Mean is a personalization model that compute the users' representations
+    as the average of the representations of their associated documents. Texts representations
+    were computed with all-MiniLM-L6-v2.
+  paper: A Multi-Domain Benchmark for Personalized Search Evaluation
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  tags:
+  - Personalization
+  - Long-Term Personalization
+  - Neural Network
+  - Deep Learning
+  - Transformer

@@ -1,0 +1,45 @@
+.dataset {
+  color: $black;
+}
+
+// SECTION TITLE
+.dataset.section-title {
+  margin-top: 20px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  border-color: #dddddd;
+}
+
+.dataset.leaderboard {
+  border-collapse: collapse;
+  // margin: 25px 0;
+  margin: 5px 0;
+  font-size: 1em;
+  font-weight: 300;
+  font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+  min-width: 100%;
+  text-align: center;
+
+  .name {
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .ranxhub-id {
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .metric {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  tr {
+    color: $black;
+  }
+}

@@ -1,0 +1,35 @@
+---
+title: ranxhub
+description: Are you tired of implementing, training, and running baselines?
+---
+<section class="hero">
+	<div class="text-container">
+		<h1 class="editable app-title"><strong>ranxhub</strong></h1>
+		<h2 class="app-subtitle">A repository for IR runs</h2>
+		<p class="subtext editable">Are you tired of implementing, training, and running baselines?</p>
+<div class="code-block">
+<pre><code><span class="py-symbol"> 1</span>  <span class="py-lang">from </span><span class="py-pkg">ranx </span><span class="py-lang">import </span><span class="py-pkg">Qrels</span><span class="py-symbol">, </span><span class="py-pkg">Run</span><span class="py-symbol">, </span><span class="py-pkg">compare</span>
+<span class="py-symbol"> 2</span>  
+<span class="py-symbol"> 3</span>  <span class="py-var">qrels</span><span class="py-eq"> = </span><span class="py-class">Qrels</span><span class="py-symbol">(</span><span class="py-str">...</span><span class="py-symbol">)</span>
+<span class="py-symbol"> 4</span>  <span class="py-var">my_run</span><span class="py-eq"> = </span><span class="py-class">Run</span><span class="py-symbol">(</span><span class="py-str">...</span><span class="py-symbol">)</span>
+<span class="py-symbol"> 5</span>  
+<span class="py-symbol"> 6</span>  <span class="py-comment"># Download pre-computed runs from RanxHub</span>
+<span class="py-symbol"> 7</span>  <span class="py-var">bm25_run</span><span class="py-eq"> = </span><span class="py-class">Run</span><span class="py-symbol">.</span><span class="py-func">from_ranxhub</span><span class="py-symbol">(</span><span class="py-str">"bm25-run-id"</span><span class="py-symbol">)</span>
+<span class="py-symbol"> 8</span>  <span class="py-var">bert_run</span><span class="py-eq"> = </span><span class="py-class">Run</span><span class="py-symbol">.</span><span class="py-func">from_ranxhub</span><span class="py-symbol">(</span><span class="py-str">"bert-run-id"</span><span class="py-symbol">)</span>
+<span class="py-symbol"> 9</span>  
+<span class="py-symbol">10</span>  <span class="py-func">compare</span><span class="py-symbol">(</span>
+<span class="py-symbol">11</span>    <span class="py-param">qrels</span><span class="py-eq">=</span><span class="py-var">qrels</span><span class="py-symbol">,</span>
+<span class="py-symbol">12</span>    <span class="py-param">runs</span><span class="py-eq">=</span><span class="py-symbol">[</span><span class="py-var">bm25_run</span><span class="py-symbol">,</span><span class="py-var">bert_run</span><span class="py-symbol">,</span><span class="py-var">my_run</span><span class="py-symbol">]</span><span class="py-symbol">,</span>
+<span class="py-symbol">13</span>    <span class="py-param">metrics</span><span class="py-eq">=</span><span class="py-symbol">[</span><span class="py-var">"map@100"</span><span class="py-symbol">,</span><span class="py-var">"mrr@10"</span><span class="py-symbol">,</span><span class="py-var">"ndcg@10"</span><span class="py-symbol">]</span><span class="py-symbol">,</span>
+<span class="py-symbol">14</span>  <span class="py-symbol">)</span>
+<span class="py-symbol">15</span>
+<span class="py-symbol">16</span>  <span class="py-comment">#    Model   MAP@100   MRR@100   NDCG@10</span>
+<span class="py-symbol">17</span>  <span class="py-comment">---  ------  --------  --------  --------</span>
+<span class="py-symbol">18</span>  <span class="py-comment">a    bm25    0.233     0.234     0.239</span>
+<span class="py-symbol">19</span>  <span class="py-comment">b    bert    0.366ᵃ    0.367ᵃ    0.408ᵃ</span>
+<span class="py-symbol">20</span>  <span class="py-comment">c    my_run  0.405ᵃᵇ   0.406ᵃᵇ   0.451ᵃᵇ</span>
+</code></pre>
+</div>
+
+<div class="cta button alt"><a href="https://github.com/AmenRa/ranx"><span class="social-icon">{% include social-icon.html icon="GitHub" %}</span> Let's get started!</a></div>
+</section>

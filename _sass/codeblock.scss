@@ -1,0 +1,98 @@
+.code-frame {
+  border: 10px solid white;
+  border-radius: 30px;
+  box-sizing: border-box;
+  display: block;
+  background-image: linear-gradient(140deg, rgba(99, 106, 224, 0.75), rgba(153, 255, 153, 0.75));
+}
+
+.code-block {
+  margin: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: left !important;
+
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+}
+
+.inline-code {
+  background: #ffeff0;
+  word-wrap: break-word;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.3rem;
+
+  font-family: monospace;
+  font-size: 1.25rem;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+}
+
+// YAML ------------------------------------------------------------------------
+.yaml-key {
+  color: #e6e6e6;
+}
+
+.yaml-symbol {
+  color: #13cc72;
+}
+
+.yaml-comment {
+  color: #999999;
+}
+
+.yaml-value {
+  color: #e6e6e6;
+}
+
+// PYTHON ----------------------------------------------------------------------
+.py-lang {
+  color: #ff6666;
+}
+
+.py-eq {
+  color: #ff6666;
+}
+
+.py-pkg,
+.py-class,
+.py-func {
+  color: #cc99ff;
+}
+
+.py-param {
+  color: #ffb570;
+}
+
+.py-str {
+  color: #a9c4eb;
+}
+
+.py-number {
+  color: #7ea6e0;
+}
+
+.py-var {
+  color: #e6e6e6;
+}
+
+.py-symbol {
+  color: #13cc72;
+}
+
+.py-yellow {
+  color: #ffd966;
+}
+
+.py-comment {
+  color: #999999;
+}

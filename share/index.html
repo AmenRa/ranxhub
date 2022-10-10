@@ -1,0 +1,176 @@
+---
+title: Share pre-computed runs and lead by example!
+<!-- description: RanxHub's underlying motivations. -->
+---
+
+<div class="content">
+	<!-- <section> -->
+	<div class="container flex">
+		<div class="text editable">
+			<p>
+				In this section, we describe how to prepare and share your run with the <a href="{{ site.baseurl }}">RanxHub</a> community!
+				<br />
+				We encourage you to consider sharing your run to help others save time, resources, and reduce CO<sub>2</sub> emissions.
+			</p>
+
+			<h3>What is a Run Card?</h3>
+			<hr>
+
+			<p>
+				A run card is a <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> file containing your run's metadata.
+				The metadata that you add to the run card improve its discoverability and enable certain interactions on the hub, such as indexing and tag-based filtering.
+			</p>
+
+			<p>
+				A run card is divided into four sections:
+				<ul>
+					<li>
+						<b>Run metadata:</b> how the run was computed, who computed the run, tags for indexing, and
+						other information;
+					</li>
+					<li>
+						<b>Benchmark metadata:</b> name, dataset, split, version, and the <a href="https://ir-datasets.com">ir-datasets</a> id, if any;
+					</li>
+					<li>
+						<b>Paper metadata:</b> title, authors (with name and <a href="https://orcid.org">ORCID</a>),
+						publication date, <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">doi</a>, <a href="https://dblp.org">dblp</a> URL for
+						<a href="https://en.wikipedia.org/wiki/BibTeX">BibTex</a>;
+					</li>
+					<li>
+						<b>Model metadata:</b> name, description, tags for indexing, paper title, authors (with name and
+						<a href="https://orcid.org">ORCID</a>),
+						publication date, <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">doi</a>, <a href="https://dblp.org">dblp</a> URL for
+						<a href="https://en.wikipedia.org/wiki/BibTeX">BibTex</a>.
+					</li>
+				</ul>
+			</p>
+
+			<p>
+				Here are an <a href="https://github.com/AmenRa/ranxhub/blob/main/files/runcard-empty.yaml">empty run card</a> and a <a href="https://github.com/AmenRa/ranxhub/blob/main/files/runcard-filled.yaml">filled one</a>.
+			</p>
+
+<!-- <h3>Run Card metadata</h3>
+<hr>
+<p><b>Run metadata</b></p>
+<div class="code-frame">
+	<div class="code-block">
+		<pre><code><span class="yaml-key">run</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">name</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">version</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">description</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">code</span><span class="yaml-symbol">:         </span><span class="yaml-comment"># Repository URL</span>
+  <span class="yaml-key">authors</span><span class="yaml-symbol">:      </span><span class="yaml-comment"># This is a list</span>
+    <span class="yaml-symbol">-</span> <span class="yaml-key">name</span><span class="yaml-symbol">: </span>
+      <span class="yaml-key">orcid</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">team</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">name</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">url</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">tags</span><span class="yaml-symbol">: </span>        </span><span class="yaml-comment"># Fine-Tuned, Zero-Shot, Re-Ranking, ...</span>
+    <span class="yaml-symbol">-</span> <span class="yaml-key">tag</span>
+  <span class="yaml-key">date</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">day</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">month</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">year</span><span class="yaml-symbol">: </span>
+</code></pre>
+	</div>
+</div>
+
+<p><b>Benchmark metadata</b></p>
+<div class="code-frame">
+	<div class="code-block">
+		<pre><code><span class="yaml-key">benchmark</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">name</span><span class="yaml-symbol">:        </span><span class="yaml-comment"># A benchmark can be composed of multiple datasets</span>
+  <span class="yaml-key">dataset</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">split</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">version</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">ir-datasets-id</span><span class="yaml-symbol">: </span>
+</code></pre>
+	</div>
+</div>
+
+<p><b>Paper metadata</b></p>
+<div class="code-frame">
+	<div class="code-block">
+		<pre><code><span class="yaml-key">paper</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">title</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">authors</span><span class="yaml-symbol">:      </span><span class="yaml-comment"># This is a list</span>
+    <span class="yaml-symbol">-</span> <span class="yaml-key">name</span><span class="yaml-symbol">: </span>
+      <span class="yaml-key">orcid</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">date</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">day</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">month</span><span class="yaml-symbol">: </span>
+    <span class="yaml-key">year</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">doi</span><span class="yaml-symbol">:          </span><span class="yaml-comment"># doi id</span>
+  <span class="yaml-key">dblp</span><span class="yaml-symbol">:         </span><span class="yaml-comment"># URL to the BibTeX hosted on dblp</span>
+</code></pre>
+	</div>
+</div>
+
+<p><b>Model metadata</b></p>
+<div class="code-frame">
+	<div class="code-block">
+		<pre><code><span class="yaml-key">model</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">name</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">description</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">paper</span><span class="yaml-symbol">: </span>
+  <span class="yaml-key">doi</span><span class="yaml-symbol">:          </span><span class="yaml-comment"># doi id</span>
+  <span class="yaml-key">dblp</span><span class="yaml-symbol">:         </span><span class="yaml-comment"># URL to the BibTeX hosted on dblp</span>
+  <span class="yaml-key">authors</span><span class="yaml-symbol">:      </span><span class="yaml-comment"># This is a list</span>
+    <span class="yaml-symbol">-</span> <span class="yaml-key">name</span><span class="yaml-symbol">: </span>
+      <span class="yaml-key">orcid</span><span class="yaml-symbol">: </span> 
+  <span class="yaml-key">tags</span><span class="yaml-symbol">:         </span><span class="yaml-comment"># Neural Network, Transformer, Personalization, ...</span>
+</code></pre>
+	</div>
+</div> -->
+
+<br />
+<h3>Share a run</h3>
+<hr>
+
+<p>
+	Once you have built the card, it's time to convert your run to the <a href="{{ site.baseurl }}">RanxHub</a> format and share it with the community.
+</p>
+<p>
+	First, you load the run and Qrels for the same queries into <a href="https://github.com/AmenRa/ranx">ranx</a>.
+	<br />
+	If you are not familiar with <a href="https://github.com/AmenRa/ranx">ranx</a>, <a href="https://colab.research.google.com/github/AmenRa/ranx/blob/master/notebooks/2_qrels_and_run.ipynb">here</a> you can find more information about loading your data.
+</p>
+<p>
+	Once imported, you can proceed with the conversion process as follows:
+</p>
+
+<div class="code-frame">
+	<div class="code-block">
+		<pre><code><span class="py-lang">from </span><span class="py-pkg">ranx </span><span class="py-lang">import </span><span class="py-pkg">ranxhub </span>
+
+<span class="py-pkg">ranxhub</span><span class="py-symbol">.</span><span class="py-func">save</span><span class="py-symbol">(</span>
+  <span class="py-param">qrels</span><span class="py-eq">=</span><span class="py-var">qrels</span><span class="py-symbol">,</span>
+  <span class="py-param">run</span><span class="py-eq">=</span><span class="py-var">your_run</span><span class="py-symbol">,</span>
+  <span class="py-param">runcard_path</span><span class="py-eq">=</span><span class="py-str">"path/to/runcard.yaml"</span><span class="py-symbol">,</span>
+  <span class="py-param">path</span><span class="py-eq">=</span><span class="py-str">"run_name.rh"</span><span class="py-symbol">,</span>  <span class="py-comment"># Save the run with the .rh extension</span>
+<span class="py-symbol">)</span>
+</code></pre>
+	</div>
+</div>
+
+<p>
+	During conversion, <a href="https://github.com/AmenRa/ranx">ranx</a> computes scores for several metrics, and the results are stored in the ran and its card, which is automatically updated.
+	That is why we require you to give the Qrels as input.
+</p>
+<p>
+	This process should take a few minutes or less, depending on the number of queries and results.
+</p>
+<p>
+	We encourage you to submit runs accounting for 1000 results per query and share runs for both validation and test sets.
+</p>
+<p>
+	Once finished the process, you are ready to share your run and its card with us by <a href="mailto:ranxhub@gmail.com">sending us</a> a link for download. 
+	We will then upload your run on our servers and add the model card to this website.
+</p>
+<p>
+	Pretty easy, right? :)
+</p>
+
+		</div>
+	</div>
+</div>

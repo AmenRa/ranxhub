@@ -1,0 +1,101 @@
+ranxhub-id: amdbfpse/phy/test/ikr3/bm25
+
+run:
+  name: BM25
+  version: 1.0
+  description: Classic BM25 baseline.
+  code: https://github.com/AmenRa/amdbfpse-baselines
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: IKR3
+    url: https://ikr3.disco.unimib.it
+  results:
+    HR@1: 0.3901979264844486
+    HR@5: 0.7382972038956959
+    HR@10: 0.8523405592208608
+    HR@20: 0.9252277725416274
+    HR@50: 0.9802073515551367
+    HR@100: 0.9937166195413132
+    P@1: 0.3901979264844486
+    P@5: 0.2921143575243481
+    P@10: 0.23840716305372292
+    P@20: 0.1845271756204838
+    P@50: 0.12367263587810243
+    P@100: 0.08767200754005655
+    Recall@1: 0.020668151692574886
+    Recall@5: 0.0751519739304953
+    Recall@10: 0.1205202084080377
+    Recall@20: 0.1827702511739467
+    Recall@50: 0.2989580541174601
+    Recall@100: 0.41679801239363307
+    Recall@1000: 1.0
+    F1@1: 3.5157009709318855e-05
+    F1@5: 0.0008670811927355155
+    F1@10: 0.0019526405297904826
+    F1@20: 0.003987454219370468
+    F1@50: 0.013704754310368331
+    F1@100: 0.02743595660389263
+    MRR@1: 0.3901979264844486
+    MRR@5: 0.5215231961461934
+    MRR@10: 0.5368405567274559
+    MRR@20: 0.5419531908234407
+    MRR@50: 0.5438525894665327
+    MRR@100: 0.544053905496827
+    MAP@1: 0.020668151692574886
+    MAP@5: 0.05462266533654614
+    MAP@10: 0.07313274637629405
+    MAP@20: 0.09148440937833631
+    MAP@50: 0.11361474768227572
+    MAP@100: 0.1276927071918605
+    NDCG@1: 0.3901979264844486
+    NDCG@5: 0.3136785582994889
+    NDCG@10: 0.26877746678031655
+    NDCG@20: 0.24431702351885357
+    NDCG@50: 0.281882032269591
+    NDCG@100: 0.33444712153605605
+  tags:
+  - Fine-Tuned
+  - Retrieval
+  date:
+    day: 12
+    month: August
+    year: 2022
+benchmark:
+  name: A Multi-Domain Benchmark for Personalized Search Evaluation
+  dataset: Physics
+  split: Test
+  version: 1.0
+  ir-datasets-id: N/A
+paper:
+  title: A Multi-Domain Benchmark for Personalized Search Evaluation
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  - name: Pranav Kasela
+    orcid: 0000-0003-0972-2424
+  - name: Alessandro Raganato
+    orcid: 0000-0002-7018-7515
+  - name: Gabriella Pasi
+    orcid: 0000-0002-6080-8170
+  date:
+    day: 17
+    month: October
+    year: 2022
+  doi: 10.1145/3511808.3557536
+  dblp: ''
+model:
+  name: BM25
+  description: Classic probabilistic retrieval model.
+  paper: 'The probabilistic relevance framework: BM25 and beyond'
+  doi: 10.1561/1500000019
+  dblp: https://dblp.org/rec/journals/ftir/RobertsonZ09.html?view=bibtex
+  authors:
+  - name: Stephen Robertson
+    orcid: 0000-0003-4115-6215
+  - name: Hugo Zaragoza
+    orcid: ''
+  tags:
+  - Classic
+  - Probabilistic
