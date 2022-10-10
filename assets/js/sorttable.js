@@ -10,7 +10,8 @@ $(document).ready(function () {
             { "visible": true, "searchable": true },
             // { "visible": true, "searchable": true },
             { "visible": false, "searchable": true }
-        ]
+        ],
+        "autoWidth": false
         // paging: false,
         // info: false,
     });

@@ -108,11 +108,11 @@ description:
     </thead>
     <tbody>
         <tr>
-            <td class="metric">{{run_metadata.results["MAP@100"]     | times: 100 | precision: 2}}</td>
-            <td class="metric">{{run_metadata.results["MRR@10"]      | times: 100 | precision: 2}}</td>
-            <td class="metric">{{run_metadata.results["MRR@100"]     | times: 100 | precision: 2}}</td>
-            <td class="metric">{{run_metadata.results["NDCG@10"]     | times: 100 | precision: 2}}</td>
-            <td class="metric">{{run_metadata.results["NDCG@100"]    | times: 100 | precision: 2}}</td>
+            <td class="metric-score">{{run_metadata.results["MAP@100"]}}</td>
+            <td class="metric-score">{{run_metadata.results["MRR@10"] }}</td>
+            <td class="metric-score">{{run_metadata.results["MRR@100"]}}</td>
+            <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
+            <td class="metric-score">{{run_metadata.results["NDCG@100"]}}</td>
         </tr>
     </tbody>
 </table>
