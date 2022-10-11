@@ -18,9 +18,9 @@ description: Are you tired of implementing, training, and running baselines?
 <span class="py-symbol"> 8</span>  <span class="py-var">bert_run</span><span class="py-eq"> = </span><span class="py-class">Run</span><span class="py-symbol">.</span><span class="py-func">from_ranxhub</span><span class="py-symbol">(</span><span class="py-str">"bert-run-id"</span><span class="py-symbol">)</span>
 <span class="py-symbol"> 9</span>  
 <span class="py-symbol">10</span>  <span class="py-func">compare</span><span class="py-symbol">(</span>
-<span class="py-symbol">11</span>    <span class="py-param">qrels</span><span class="py-eq">=</span><span class="py-var">qrels</span><span class="py-symbol">,</span>
-<span class="py-symbol">12</span>    <span class="py-param">runs</span><span class="py-eq">=</span><span class="py-symbol">[</span><span class="py-var">bm25_run</span><span class="py-symbol">,</span><span class="py-var">bert_run</span><span class="py-symbol">,</span><span class="py-var">my_run</span><span class="py-symbol">]</span><span class="py-symbol">,</span>
-<span class="py-symbol">13</span>    <span class="py-param">metrics</span><span class="py-eq">=</span><span class="py-symbol">[</span><span class="py-var">"map@100"</span><span class="py-symbol">,</span><span class="py-var">"mrr@10"</span><span class="py-symbol">,</span><span class="py-var">"ndcg@10"</span><span class="py-symbol">]</span><span class="py-symbol">,</span>
+<span class="py-symbol">11</span>    <span class="py-param">qrels</span><span class="py-eq">=</span><span class="py-var">qrels</span><span class="py-symbol">, </span>
+<span class="py-symbol">12</span>    <span class="py-param">runs</span><span class="py-eq">=</span><span class="py-symbol">[</span><span class="py-var">bm25_run</span><span class="py-symbol">, </span><span class="py-var">bert_run</span><span class="py-symbol">, </span><span class="py-var">my_run</span><span class="py-symbol">]</span><span class="py-symbol">, </span>
+<span class="py-symbol">13</span>    <span class="py-param">metrics</span><span class="py-eq">=</span><span class="py-symbol">[</span><span class="py-var">"map@100"</span><span class="py-symbol">, </span><span class="py-var">"mrr@10"</span><span class="py-symbol">, </span><span class="py-var">"ndcg@10"</span><span class="py-symbol">]</span><span class="py-symbol">, </span>
 <span class="py-symbol">14</span>  <span class="py-symbol">)</span>
 <span class="py-symbol">15</span>
 <span class="py-symbol">16</span>  <span class="py-comment">#    Model   MAP@100   MRR@100   NDCG@10</span>
