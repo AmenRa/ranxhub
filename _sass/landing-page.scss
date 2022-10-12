@@ -1,7 +1,7 @@
 .app-title {
 	font-family: "MuseoModerno", cursive;
 	text-transform: uppercase;
-	letter-spacing: 10px;
+	letter-spacing: 0.5rem;
 	font-size: 4rem;
 }
 
@@ -32,6 +32,7 @@
 	p {
 		color: #fff;
 		font-size: 1.38em;
+		margin-top: 0.5em;
 		margin-bottom: 0.5em;
 		font-weight: 300;
 		line-height: 1.8rem;
