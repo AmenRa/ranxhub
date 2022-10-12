@@ -11,6 +11,10 @@ body {
 body {
 	font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
 	color: #333333;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 a {
