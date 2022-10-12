@@ -15,7 +15,10 @@ datatable: true
 
 
 
-<div>
+<div class="content">
+    <div class="container flex">
+        <div class="text editable">
+
     <p>
         You can find more information about this dataset <a
             href="https://github.com/AmenRa/a-multi-domain-benchmark-for-personalized-search-evaluation">here</a>.
@@ -32,9 +35,7 @@ datatable: true
                 <th class="ranxhub-id">RanxHub ID</th>
                 <th class="metric">MAP@100</th>
                 <th class="metric">MRR@10</th>
-                <th class="metric">MRR@100</th>
                 <th class="metric">NDCG@10</th>
-                <th class="metric">NDCG@100</th>
                 <th>Full-text</th>
             </tr>
         </thead>
@@ -51,9 +52,7 @@ datatable: true
                 <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
                 <td class="metric-score">{{run_metadata.results["MAP@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["MRR@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["MRR@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["NDCG@100"]}}</td>
                 <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
             </tr>
 
@@ -70,9 +69,7 @@ datatable: true
                 <th class="ranxhub-id">RanxHub ID</th>
                 <th class="metric">MAP@100</th>
                 <th class="metric">MRR@10</th>
-                <th class="metric">MRR@100</th>
                 <th class="metric">NDCG@10</th>
-                <th class="metric">NDCG@100</th>
                 <th>Full-text</th>
             </tr>
         </thead>
@@ -89,9 +86,7 @@ datatable: true
                 <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
                 <td class="metric-score">{{run_metadata.results["MAP@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["MRR@10"] }}</td>
-                <td class="metric-score">{{run_metadata.results["MRR@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["NDCG@100"]}}</td>
                 <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
             </tr>
 
@@ -108,9 +103,7 @@ datatable: true
                 <th class="ranxhub-id">RanxHub ID</th>
                 <th class="metric">MAP@100</th>
                 <th class="metric">MRR@10</th>
-                <th class="metric">MRR@100</th>
                 <th class="metric">NDCG@10</th>
-                <th class="metric">NDCG@100</th>
                 <th>Full-text</th>
             </tr>
         </thead>
@@ -127,9 +120,7 @@ datatable: true
                 <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
                 <td class="metric-score">{{run_metadata.results["MAP@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["MRR@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["MRR@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["NDCG@100"]}}</td>
                 <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
             </tr>
 
@@ -146,9 +137,7 @@ datatable: true
                 <th class="ranxhub-id">RanxHub ID</th>
                 <th class="metric">MAP@100</th>
                 <th class="metric">MRR@10</th>
-                <th class="metric">MRR@100</th>
                 <th class="metric">NDCG@10</th>
-                <th class="metric">NDCG@100</th>
                 <th>Full-text</th>
             </tr>
         </thead>
@@ -165,9 +154,7 @@ datatable: true
                 <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
                 <td class="metric-score">{{run_metadata.results["MAP@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["MRR@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["MRR@100"]}}</td>
                 <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
-                <td class="metric-score">{{run_metadata.results["NDCG@100"]}}</td>
                 <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
             </tr>
 
@@ -175,4 +162,6 @@ datatable: true
         </tbody>
     </table>
 
+		</div>
+    </div>
 </div>

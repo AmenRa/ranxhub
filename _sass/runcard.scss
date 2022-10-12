@@ -1,12 +1,9 @@
 // SECTION TITLE
 .rc.section-title {
-    margin-top: 20px;
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    // font-weight: 400;
     text-align: left;
 
-    padding-bottom: 10px;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid;
     border-color: #dddddd;
 }
@@ -14,7 +11,7 @@
 // TABLE
 .rc.table {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin-bottom: 1.15rem;
     font-size: 1.15rem;
     line-height: 1.4;
     font-weight: 300;
@@ -36,14 +33,37 @@
     }
 }
 
-// BUTTONS
+// METRICS TABLE ---------------------------------------------------------------
+.rc.metrics-table {
+    border-collapse: collapse;
+    margin-bottom: 1.15rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    font-weight: 300;
+    min-width: 100%;
+    text-align: center;
+
+    thead {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    th {
+        padding: 0 15px 0.5rem 15px;
+    }
+    td {
+        padding: 0.5rem 15px 0 15px;
+    }
+}
+
+// BUTTONS ---------------------------------------------------------------------
 .flex-container {
     display: flex;
 }
 
 .flex-child {
     flex: 1;
-    margin: 5px;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
 }
 
 .paper-datasets .badge-primary {
@@ -60,7 +80,6 @@
 }
 
 .rc.button a {
-    margin: 0 auto;
     display: flex;
     max-width: 250px;
     justify-content: center;
@@ -81,25 +100,4 @@
 .rc.button a:hover {
     background-color: #ececec;
     cursor: pointer;
-}
-
-// METRICS TABLE ---------------------------------------------------------------
-.rc.metrics-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 1.15rem;
-    line-height: 1.4;
-    font-weight: 300;
-    font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
-    min-width: 100%;
-    text-align: center;
-
-    thead {
-        border-bottom: 1px solid #dddddd;
-    }
-
-    th,
-    td {
-        padding: 12px 15px;
-    }
 }

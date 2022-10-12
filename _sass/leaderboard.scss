@@ -4,39 +4,33 @@
 
 // SECTION TITLE
 .dataset.section-title {
-  margin-top: 20px;
   font-size: 1.5rem;
-  margin-bottom: 10px;
   text-align: left;
 
-  padding-bottom: 10px;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid;
   border-color: #dddddd;
 }
 
 .dataset.leaderboard {
   border-collapse: collapse;
-  margin: 5px 0;
+  margin: 0.5rem 0;
   font-size: 1rem;
   font-weight: 300;
-  font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
   min-width: 100%;
   text-align: center;
 
   .name {
     text-align: left;
-    white-space: nowrap;
   }
 
   .ranxhub-id {
     text-align: left;
-    white-space: nowrap;
   }
 
   .metric,
   .metric-score {
     text-align: center;
-    white-space: nowrap;
   }
 
   tr {

@@ -44,9 +44,9 @@ nav {
 		&.nav-toggle {
 			display: inline;
 			position: absolute;
-			right: 10px;
-			top: -22px;
-			font-size: 1.9rem;
+			right: 0.5rem;
+			top: -1rem;
+			font-size: 3rem;
 			border: 0;
 
 			@media #{$mid-point} {

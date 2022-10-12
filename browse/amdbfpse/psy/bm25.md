@@ -101,18 +101,14 @@ description:
         <tr>
             <th class="metric">MAP@100</th>
             <th class="metric">MRR@10</th>
-            <th class="metric">MRR@100</th>
             <th class="metric">NDCG@10</th>
-            <th class="metric">NDCG@100</th>
         </tr>        
     </thead>
     <tbody>
         <tr>
             <td class="metric-score">{{run_metadata.results["MAP@100"]}}</td>
             <td class="metric-score">{{run_metadata.results["MRR@10"] }}</td>
-            <td class="metric-score">{{run_metadata.results["MRR@100"]}}</td>
             <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
-            <td class="metric-score">{{run_metadata.results["NDCG@100"]}}</td>
         </tr>
     </tbody>
 </table>
