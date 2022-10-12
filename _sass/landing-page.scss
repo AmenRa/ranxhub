@@ -2,19 +2,19 @@
 	font-family: "MuseoModerno", cursive;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	font-size: 4em;
+	font-size: 4rem;
 }
 
 .app-subtitle {
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 }
 
 .cta.button.alt a {
 	margin: 0 auto;
 	display: flex;
-	max-width: 250px;
+	max-width: 15em;
 	justify-content: center;
 	align-items: center;
 
@@ -32,9 +32,9 @@
 	p {
 		color: #fff;
 		font-size: 1.38em;
-		margin-bottom: 20px;
+		margin-bottom: 0.5em;
 		font-weight: 300;
-		line-height: 1.4em;
+		line-height: 1.8rem;
 	}
 
 	.code-block {
