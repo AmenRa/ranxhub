@@ -1,0 +1,43 @@
+ranxhub-id: msmarco/passage/dev/trec-dl-2019/bm25-pyserini
+run:
+  name: BM25 Pyserini
+  version: 1.0
+  description: Classic BM25 baseline computed with Pyserini standard configuration
+    (k1=0.9, b=0.4).
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 3
+    month: February
+    year: 2023
+  results:
+    NDCG@10: 0.5058310024399073
+    MAP@1000: 0.30128558071075273
+    Recall@1000: 0.7501450319499805
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2019
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2019/judged
+model:
+  name: BM25
+  description: Classic probabilistic retrieval model.
+  paper: 'The probabilistic relevance framework: BM25 and beyond'
+  doi: 10.1561/1500000019
+  dblp: https://dblp.org/rec/journals/ftir/RobertsonZ09.html?view=bibtex
+  authors:
+  - name: Stephen Robertson
+    orcid: 0000-0003-4115-6215
+  - name: Hugo Zaragoza
+    orcid: ''
+  tags:
+  - Classic
+  - Probabilistic

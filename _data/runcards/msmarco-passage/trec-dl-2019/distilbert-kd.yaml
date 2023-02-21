@@ -1,0 +1,52 @@
+ranxhub-id: msmarco/passage/trec-dl-2019/ranxhub/distilbert-kd
+run:
+  name: DistilBERT KD
+  version: 1.0
+  description: DistilBERT KD run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 3
+    month: February
+    year: 2023
+  results:
+    NDCG@10: 0.6994296896841119
+    MAP@1000: 0.4052535407823343
+    Recall@1000: 0.7652937677433573
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2019
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2019/judged
+model:
+  name: DistilBERT KD
+  description: The authors use an ensemble of BERTcat models (the vanilla BERT passage
+    re-ranking model) to teach and improve a DistilBERT ranker with a Margin-MSE loss.
+  code: https://github.com/sebastian-hofstaetter/neural-ranking-kd
+  paper: Improving Efficient Neural Ranking Models with Cross-Architecture Knowledge
+    Distillation
+  doi: 10.48550/arXiv.2010.02666
+  dblp: https://dblp.org/rec/journals/corr/abs-2010-02666.html?view=bibtex
+  authors:
+  - name: "Sebastian Hofst\xE4tter"
+    orcid: ''
+  - name: Sophia Althammer
+    orcid: ''
+  - name: "Michael Schr\xF6der"
+    orcid: 0000-0003-1496-0531
+  - name: Mete Sertkan
+    orcid: ''
+  - name: Allan Hanbury
+    orcid: 0000-0002-7149-5843
+  tags:
+  - Dense Retrieval
+  - Knowledge Distillation
+  - DistilBERT

@@ -1,0 +1,53 @@
+ranxhub-id: msmarco/passage/dev/ranxhub/unicoil
+run:
+  name: UniCOIL
+  version: 1.0
+  description: UniCOIL run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 3
+    month: February
+    year: 2023
+  results:
+    MRR@10: 0.351552224041479
+    MAP@1000: 0.3572757316324218
+    Recall@1000: 0.9581900668576887
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: Dev
+  version: 1.0
+  ir-datasets-id: msmarco-passage/dev/small
+model:
+  name: UniCOIL
+  description: "The model predicts impact weights of queries' and documents' tokens\
+    \ using BERT and relies on exact lexical matching to compute the similarity between\
+    \ queries and documents. Documents are expanded using doc2query\u2013T5 to counteract\
+    \ the Vocabulary Mismatch problem."
+  code: https://github.com/luyug/COIL/tree/main/uniCOIL
+  paper: Document Expansions and Learned Sparse Lexical Representations for MS MARCO
+    V1 and V2
+  doi: 110.1145/3477495.3531749
+  dblp: https://dblp.org/rec/conf/sigir/MaPNL22.html?view=bibtex
+  authors:
+  - name: Xueguang Ma
+    orcid: ''
+  - name: Ronak Pradeep
+    orcid: ''
+  - name: Rodrigo Nogueira
+    orcid: 0000-0002-2600-6035
+  - name: Jimmy Lin
+    orcid: 0000-0002-0661-7189
+  tags:
+  - Sparse Retrieval
+  - Term Impacts Learning
+  - Document Expansion
+  - BERT

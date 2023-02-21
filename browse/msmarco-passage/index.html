@@ -1,0 +1,132 @@
+---
+title: MSMARCO Passage Ranking
+datatable: true
+---
+
+
+{% assign datasets = site.data.datasets %}
+{% assign benchmark = "msmarco-passage" %}
+
+{% assign dev_runs = site.data.runcards[benchmark]["dev"] %}
+{% assign dl19_runs = site.data.runcards[benchmark]["dl19"] %}
+{% assign dl20_runs = site.data.runcards[benchmark]["dl20"] %}
+
+
+
+<div class="content">
+    <div class="container flex">
+        <div class="text editable">
+
+    <p>
+        You can find more information about this dataset <a
+            href="https://arxiv.org/abs/1611.09268">here</a>.
+    </p>
+    <p>
+        <u>The search function inspect all the metadata, even those not displayed!</u>
+    </p>
+    <p>
+        <u>To reproduce TREC DL 2019 and TREC DL 2020 with <a href="https://github.com/AmenRa/ranx">ranx</a> you must set the relevance level of binary metrics to 2, e.g., "map@1000-l2".</u>
+    </p>
+
+    <h2 class="dataset section-title">Passage - Dev Set</h2>
+    <table class="dataset leaderboard hover leaderboard-msmarco-passagee">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">MRR@10</th>
+                <th class="metric">MAP@1000</th>
+                <th class="metric">Recall@1000</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in dev_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a
+                        href="{{ site.baseurl }}/browse/{{benchmark}}/dev/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric-score">{{run_metadata.results["MRR@10"]}}</td>
+                <td class="metric-score">{{run_metadata.results["MAP@1000"]}}</td>
+                <td class="metric-score">{{run_metadata.results["Recall@1000"]}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+    <h2 class="dataset section-title">TREC DL 2019</h2>
+    <table class="dataset leaderboard hover leaderboard-msmarco-passagee">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">MRR@10</th>
+                <th class="metric">MAP@1000</th>
+                <th class="metric">Recall@1000</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in dl19_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a href="{{ site.baseurl }}/browse/{{benchmark}}/trec-dl-2019/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric-score">{{run_metadata.results["MRR@10"]}}</td>
+                <td class="metric-score">{{run_metadata.results["MAP@1000"]}}</td>
+                <td class="metric-score">{{run_metadata.results["Recall@1000"]}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+    <h2 class="dataset section-title">TREC DL 2020</h2>
+    <table class="dataset leaderboard hover leaderboard-msmarco-passagee">
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="ranxhub-id">RanxHub ID</th>
+                <th class="metric">NDCG@10</th>
+                <th class="metric">MAP@1000</th>
+                <th class="metric">Recall@1000</th>
+                <th>Full-text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for run in dl20_runs %}
+            {% assign run_filename = run[0] %}
+            {% assign run_metadata = run[1].run %}
+            {% assign ranxhub_id = run[1]["ranxhub-id"] %}
+            <tr>
+                <td class="name"><a href="{{ site.baseurl }}/browse/{{benchmark}}/trec-dl-2020/{{ run_filename }}">{{ run_metadata.name }}</a>
+                </td>
+
+                <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
+                <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
+                <td class="metric-score">{{run_metadata.results["MAP@1000"]}}</td>
+                <td class="metric-score">{{run_metadata.results["Recall@1000"]}}</td>
+                <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+		</div>
+    </div>
+</div>

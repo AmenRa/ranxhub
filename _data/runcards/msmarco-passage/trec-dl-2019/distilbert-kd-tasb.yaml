@@ -1,0 +1,54 @@
+ranxhub-id: msmarco/passage/trec-dl-2019/ranxhub/distilbert-kd-tasb
+run:
+  name: DistilBERT KD TASB
+  version: 1.0
+  description: DistilBERT KD TASB run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 3
+    month: February
+    year: 2023
+  results:
+    NDCG@10: 0.7210329462852862
+    MAP@1000: 0.4589655995972589
+    Recall@1000: 0.8406351026610451
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2019
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2019/judged
+model:
+  name: DistilBERT KD TASB
+  description: The authors use an ensemble of BERTcat models (the vanilla BERT passage
+    re-ranking model) to teach and improve a DistilBERT ranker with a Margin-MSE loss.
+    The authors also use a topic-aware query and balanced margin sampling technique,
+    called TAS-Balanced.
+  code: https://github.com/sebastian-hofstaetter/tas-balanced-dense-retrieval
+  paper: Efficiently Teaching an Effective Dense Retriever with Balanced Topic Aware
+    Sampling
+  doi: 10.1145/3404835.3462891
+  dblp: https://dblp.org/rec/conf/sigir/HofstatterLYLH21.html?view=bibtex
+  authors:
+  - name: "Sebastian Hofst\xE4tter"
+    orcid: ''
+  - name: Sheng-Chieh Lin
+    orcid: ''
+  - name: Jheng-Hong Yang
+    orcid: ''
+  - name: Jimmy Lin
+    orcid: 0000-0002-0661-7189
+  - name: Allan Hanbury
+    orcid: 0000-0002-7149-5843
+  tags:
+  - Dense Retrieval
+  - Knowledge Distillation
+  - DistilBERT

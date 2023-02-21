@@ -1,0 +1,50 @@
+ranxhub-id: msmarco/passage/trec-dl-2020/ranxhub/ance
+run:
+  name: ANCE
+  version: 1.0
+  description: ANCE run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 3
+    month: February
+    year: 2023
+  results:
+    NDCG@10: 0.6457601052924431
+    MAP@1000: 0.40766564067193684
+    Recall@1000: 0.7764298079709676
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2020
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2020/judged
+model:
+  name: ANCE
+  description: Single representation, dense retrieval model trained by selecting global
+    negatives with big gradient norms using an asynchronously updated ANN index.
+  paper: Approximate nearest neighbor negative contrastive learning for dense text
+    retrieval
+  doi: 10.48550/arXiv.2007.00808
+  dblp: https://dblp.org/rec/conf/iclr/XiongXLTLBAO21.html?view=bibtex
+  authors:
+  - name: Lee Xiong
+  - name: Chenyan Xiong
+  - name: Ye Li
+  - name: Kwok-Fung Tang
+  - name: Jialin Liu
+  - name: Paul Bennett
+  - name: Junaid Ahmed
+  - name: Arnold Overwijk
+  tags:
+  - Single Representation
+  - Dense Retrieval
+  - Dot Product
+  - BERT

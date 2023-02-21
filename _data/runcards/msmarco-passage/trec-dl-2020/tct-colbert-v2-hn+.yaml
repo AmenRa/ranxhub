@@ -1,0 +1,48 @@
+ranxhub-id: msmarco/passage/trec-dl-2020/ranxhub/tct-colbert-v2-hn+
+run:
+  name: TCT-ColBERT-V2-HN+
+  version: 1.0
+  description: TCT-ColBERT-V2-HN+ run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 3
+    month: February
+    year: 2023
+  results:
+    NDCG@10: 0.6882393744726825
+    MAP@1000: 0.4754120714070939
+    Recall@1000: 0.842946385272863
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2020
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2020/judged
+model:
+  name: TCT-ColBERT-V2-HN+
+  description: The authors employ on a knowledge distillation approach based on Col-BERT
+    late-interaction ranking model to reduce GPU memory consumption, enabling in-batch
+    negatives during training.
+  paper: In-Batch Negatives for Knowledge Distillation with Tightly-Coupled Teachers
+    for Dense Retrieval
+  doi: 10.18653/v1/2021.repl4nlp-1.17
+  dblp: https://dblp.org/rec/conf/rep4nlp/LinYL21.html?view=bibtex
+  authors:
+  - name: Sheng-Chieh Lin
+    orcid: ''
+  - name: Jheng-Hong Yang
+    orcid: ''
+  - name: Jimmy Lin
+    orcid: 0000-0002-0661-7189
+  tags:
+  - Dense Retrieval
+  - Knowledge Distillation
+  - BERT
