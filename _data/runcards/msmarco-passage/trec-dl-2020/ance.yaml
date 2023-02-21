@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/trec-dl-2020/ranxhub/ance
+ranxhub-id: msmarco-passage/trec-dl-2020/ranxhub/ance
 run:
   name: ANCE
   version: 1.0

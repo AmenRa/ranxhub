@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/dev/ranxhub/distilbert-kd
+ranxhub-id: msmarco-passage/dev/ranxhub/distilbert-kd
 run:
   name: DistilBERT KD
   version: 1.0

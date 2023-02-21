@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/dev/trec-dl-2019/bm25-pyserini
+ranxhub-id: msmarco-passage/dev/trec-dl-2019/bm25-pyserini
 run:
   name: BM25 Pyserini
   version: 1.0

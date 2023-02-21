@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/trec-dl-2019/ranxhub/tct-colbert-v2-hn+
+ranxhub-id: msmarco-passage/trec-dl-2019/ranxhub/tct-colbert-v2-hn+
 run:
   name: TCT-ColBERT-V2-HN+
   version: 1.0

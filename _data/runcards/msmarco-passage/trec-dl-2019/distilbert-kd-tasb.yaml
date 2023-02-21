@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/trec-dl-2019/ranxhub/distilbert-kd-tasb
+ranxhub-id: msmarco-passage/trec-dl-2019/ranxhub/distilbert-kd-tasb
 run:
   name: DistilBERT KD TASB
   version: 1.0

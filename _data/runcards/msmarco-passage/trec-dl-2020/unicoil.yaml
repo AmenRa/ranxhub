@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/trec-dl-2020/ranxhub/unicoil
+ranxhub-id: msmarco-passage/trec-dl-2020/ranxhub/unicoil
 run:
   name: UniCOIL
   version: 1.0

@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/dev/ranxhub/unicoil
+ranxhub-id: msmarco-passage/dev/ranxhub/unicoil
 run:
   name: UniCOIL
   version: 1.0

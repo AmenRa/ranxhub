@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/trec-dl-2020/ranxhub/distilbert-kd
+ranxhub-id: msmarco-passage/trec-dl-2020/ranxhub/distilbert-kd
 run:
   name: DistilBERT KD
   version: 1.0

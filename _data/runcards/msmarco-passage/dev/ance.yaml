@@ -1,4 +1,4 @@
-ranxhub-id: msmarco/passage/dev/ranxhub/ance
+ranxhub-id: msmarco-passage/dev/ranxhub/ance
 run:
   name: ANCE
   version: 1.0
