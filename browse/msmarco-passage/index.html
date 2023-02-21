@@ -28,7 +28,7 @@ datatable: true
         <u>To reproduce TREC DL 2019 and TREC DL 2020 with <a href="https://github.com/AmenRa/ranx">ranx</a> you must set the relevance level of binary metrics to 2, e.g., "map@1000-l2".</u>
     </p>
 
-    <h2 class="dataset section-title">Passage - Dev Set</h2>
+    <h2 class="dataset section-title">Dev Set</h2>
     <table class="dataset leaderboard hover leaderboard-msmarco-passage">
         <thead>
             <tr>
@@ -68,7 +68,7 @@ datatable: true
             <tr>
                 <th class="name">Name</th>
                 <th class="ranxhub-id">RanxHub ID</th>
-                <th class="metric">MRR@10</th>
+                <th class="metric">NDCG@10</th>
                 <th class="metric">MAP@1000</th>
                 <th class="metric">Recall@1000</th>
                 <th>Full-text</th>
@@ -84,7 +84,7 @@ datatable: true
                 </td>
 
                 <td class="ranxhub-id"><code class="inline-code">{{ranxhub_id}}</code></td>
-                <td class="metric-score">{{run_metadata.results["MRR@10"]}}</td>
+                <td class="metric-score">{{run_metadata.results["NDCG@10"]}}</td>
                 <td class="metric-score">{{run_metadata.results["MAP@1000"]}}</td>
                 <td class="metric-score">{{run_metadata.results["Recall@1000"]}}</td>
                 <td>{{run[1].run.tags}} {{run[1].model.tags}}</td>
