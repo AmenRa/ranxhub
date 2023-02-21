@@ -86,13 +86,13 @@ paper:
     month: October
     year: 2022
   doi: 10.1145/3511808.3557536
-  dblp: ''
+  dblp: https://dblp.org/rec/conf/cikm/BassaniKRP22.html?view=bibtex
 model:
   name: BiEnc
   description: BiEnc is a bi-encoder retrieval model based on all-MiniLM-L6-v2.
   paper: A Multi-Domain Benchmark for Personalized Search Evaluation
   doi: 10.1145/3511808.3557536
-  dblp: ''
+  dblp: https://dblp.org/rec/conf/cikm/BassaniKRP22.html?view=bibtex
   authors:
   - name: Elias Bassani
     orcid: 0000-0001-7922-2578

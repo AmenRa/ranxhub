@@ -84,7 +84,7 @@ paper:
     month: October
     year: 2022
   doi: 10.1145/3511808.3557536
-  dblp: ''
+  dblp: https://dblp.org/rec/conf/cikm/BassaniKRP22.html?view=bibtex
 model:
   name: BM25
   description: Classic probabilistic retrieval model.
