@@ -130,7 +130,7 @@ title: Share pre-computed runs and lead by example!
 	Once you have built the card, it's time to convert your run to the <a href="{{ site.baseurl }}">RanxHub</a> format and share it with the community.
 </p>
 <p>
-	First, you load the run and Qrels for the same queries into <a href="https://github.com/AmenRa/ranx">ranx</a>.
+	First, load the run into <a href="https://github.com/AmenRa/ranx">ranx</a>.
 	<br />
 	If you are not familiar with <a href="https://github.com/AmenRa/ranx">ranx</a>, <a href="https://colab.research.google.com/github/AmenRa/ranx/blob/master/notebooks/2_qrels_and_run.ipynb">here</a> you can find more information about loading your data.
 </p>
@@ -140,30 +140,24 @@ title: Share pre-computed runs and lead by example!
 
 <div class="code-frame">
 	<div class="code-block">
-		<pre><code><span class="py-lang">from </span><span class="py-pkg">ranx </span><span class="py-lang">import </span><span class="py-pkg">ranxhub </span>
+		<pre><code><span class="py-lang">from </span><span class="py-pkg">ranx </span><span class="py-lang">import </span><span class="py-pkg">Run </span>
 
-<span class="py-pkg">ranxhub</span><span class="py-symbol">.</span><span class="py-func">save</span><span class="py-symbol">(</span>
-  <span class="py-param">qrels</span><span class="py-eq">=</span><span class="py-var">qrels</span><span class="py-symbol">,</span>
-  <span class="py-param">run</span><span class="py-eq">=</span><span class="py-var">your_run</span><span class="py-symbol">,</span>
-  <span class="py-param">runcard_path</span><span class="py-eq">=</span><span class="py-str">"path/to/runcard.yaml"</span><span class="py-symbol">,</span>
-  <span class="py-param">path</span><span class="py-eq">=</span><span class="py-str">"run_name.rh"</span><span class="py-symbol">,</span>  <span class="py-comment"># Save the run with the .rh extension</span>
+<span class="py-var">run</span><span class="py-eq"> = </span><span class="py-class">Run</span><span class="py-symbol">(</span><span class="py-str">...</span><span class="py-symbol">)</span>
+<span class="py-pkg">run</span><span class="py-symbol">.</span><span class="py-func">save</span><span class="py-symbol">(</span><span class="py-str">"path/to/run.lz4"</span>
 <span class="py-symbol">)</span>
 </code></pre>
 	</div>
 </div>
 
 <p>
-	During conversion, <a href="https://github.com/AmenRa/ranx">ranx</a> computes scores for several metrics, and the results are stored in the ran and its card, which is automatically updated.
-	That is why we require you to give the Qrels as input.
+	It is important to save your run in <a href="https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)">LZ4</a> format to lower memory footprint.
+	<a href="https://github.com/AmenRa/ranx">ranx</a> automatically infers the the file output kind, so you just need to add ".lz4" at the end of the filename.
 </p>
 <p>
-	This process should take a few minutes or less, depending on the number of queries and results.
+	We encourage you to submit runs accounting for 1000 results per query.
 </p>
 <p>
-	We encourage you to submit runs accounting for 1000 results per query and share runs for both validation and test sets.
-</p>
-<p>
-	Once finished the process, you are ready to share your run and its card with us by <a href="mailto:ranxhub@gmail.com">sending us</a> a link for download. 
+	Once finished, you are ready to share your run and its card with us by uploading them with this <a href="https://forms.gle/fK6wLS83yZeoS1mL8">form</a>.
 	We will then upload your run on our servers and add the model card to this website.
 </p>
 <p>
