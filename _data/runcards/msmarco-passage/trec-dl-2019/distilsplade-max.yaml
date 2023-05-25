@@ -1,0 +1,47 @@
+ranxhub-id: msmarco-passage/trec-dl-2019/ranxhub/distilsplade-max
+run:
+  name: DistilSPLADE-max
+  version: 1.0
+  description: DistilSPLADE-max run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 25
+    month: May
+    year: 2023
+  results:
+    NDCG@10: 0.7280431302103255
+    MAP@1000: 0.48480225516986203
+    Recall@1000: 0.8654281615352637
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2019
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2019/judged
+model:
+  name: DistilSPLADE-max
+  description: Sparse representation model built by refining SPLADE with MAX pooling
+    and knowledge distillation.
+  paper: 'SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval'
+  doi: 10.48550/arXiv.2109.10086
+  dblp: https://dblp.uni-trier.de/rec/journals/corr/abs-2109-10086.html?view=bibtex
+  authors:
+  - name: Thibault Formal
+    orcid: ''
+  - name: Carlos Lassance
+    orcid: ''
+  - name: Benjamin Piwowarski
+    orcid: 0000-0001-6792-3262
+  - name: "St\xE9phane Clinchant"
+    orcid: ''
+  tags:
+  - Sparse Representation
+  - Knowledge Distillation
