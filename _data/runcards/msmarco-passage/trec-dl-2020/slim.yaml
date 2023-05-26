@@ -1,0 +1,53 @@
+ranxhub-id: msmarco-passage/trec-dl-2020/ranxhub/slim
+run:
+  name: SLIM
+  version: 1.0
+  description: SLIM run reproduced using Pyserini.
+  code: https://github.com/castorini/pyserini
+  authors:
+  - name: Elias Bassani
+    orcid: 0000-0001-7922-2578
+  team:
+  - name: ranxhub
+    url: https://github.com/AmenRa/ranxhub
+  tags:
+  - Retrieval
+  date:
+    day: 25
+    month: May
+    year: 2023
+  results:
+    NDCG@10: 0.6403123403278427
+    MAP@1000: 0.44188777168549054
+    Recall@1000: 0.8542621067515406
+benchmark:
+  name: MSMARCO
+  dataset: Passage
+  split: TREC DL 2020
+  version: 1.0
+  ir-datasets-id: msmarco-passage/trec-dl-2020/judged
+model:
+  name: SLIM
+  description: SLIM maps each contextualized token vector to a sparse, high-dimensional
+    lexical space before performing late interaction between sparse token embeddings.
+    It employs a two-stage retrieval architecture that includes inverted index retrieval
+    followed by a score refinement module to approximate the sparsified late interaction,
+    which is fully compatible with off-the-shelf lexical search libraries such as
+    Lucene.
+  paper: 'SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted
+    Indexes'
+  doi: 10.1145/3539618.3591977
+  dblp: https://dblp.uni-trier.de/rec/journals/corr/abs-2302-06587.html?view=bibtex
+  authors:
+  - name: Minghan Li
+    orcid: ''
+  - name: Sheng-Chieh Lin
+    orcid: ''
+  - name: Xueguang Ma
+    orcid: ''
+  - name: Jimmy Lin
+    orcid: 0000-0002-0661-7189
+  tags:
+  - Late Interactions
+  - Sparse Representations
+  - BERT
